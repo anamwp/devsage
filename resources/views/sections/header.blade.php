@@ -1,6 +1,6 @@
 <header class="site__header banner bg-black text-white py-5">
 	<div class="container site__header__container mx-auto flex justify-between">
-		<a class="brand site__brand uppercase text-2xl no-underline" href="{{ home_url('/') }}">
+		<a class="font-bold brand site__brand uppercase text-2xl no-underline" href="{{ home_url('/') }}">
 		{!! $siteName !!}
 		</a>
 
