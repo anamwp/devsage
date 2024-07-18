@@ -7,7 +7,7 @@ import Hello from './inc/test';
  */
 domReady(async () => {
 	// ...
-	console.log('hello');
+	// console.log('hello');
 	LogConsole();
 	Hello();
 	TestJquery();
