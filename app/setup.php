@@ -8,6 +8,26 @@ namespace App;
 
 use function Roots\bundle;
 
+add_action('init', 'App\handleACFOptionPanel');
+function handleACFOptionPanel(){
+    if ( function_exists( 'acf_add_options_page' ) ) {
+        // dump('ACF is active');
+    
+        acf_add_options_page(
+            array(
+                'page_title' => 'CGL General Settings',
+                'menu_title' => 'CGL Settings',
+                'menu_slug'  => 'cgl-general-settings',
+                'capability' => 'edit_posts',
+                'redirect'   => false,
+            )
+        );
+    
+    }
+
+}
+
+   
 /**
  * Register the theme assets.
  *
