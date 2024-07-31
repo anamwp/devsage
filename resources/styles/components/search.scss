@@ -1,0 +1,11 @@
+// search form inside page
+main {
+	form.search-form {
+		input[type='search'] {
+			@apply border-slate-700 border-2 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500;
+		}
+		button {
+			@apply text-white bg-slate-700 border-slate-700 border-2 px-4 py-2 rounded-md inline-block hover:bg-white hover:text-slate-700 transition-all;
+		}
+	}
+}
