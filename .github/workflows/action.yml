@@ -13,12 +13,12 @@ jobs:
     steps:
 
     - name: Check out the git repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
-        node-version: 16.14.1
+        node-version: 20.0.0
 
     - name: Install js/css dependencies
       uses: borales/actions-yarn@v4
@@ -38,6 +38,7 @@ jobs:
     - name: Deploy to WPE
       uses: wpengine/github-action-wpe-site-deploy@v3
       with:
+        REMOTE_PATH: "wp-content/themes/"
         SCRIPT: post-deploy.sh
         WPE_ENV: ${{ env.WPE_INSTALL_NAME }}
 
@@ -47,7 +48,7 @@ jobs:
     steps:
 
     - name: Check out the git repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Run composer install in theme directory
       run: cd wp-content/themes/${{ env.THEME_NAME }} && composer install && cd -
@@ -55,5 +56,6 @@ jobs:
     - name: Deploy to wpengine.com
       uses: wpengine/github-action-wpe-site-deploy@v3
       with:
+        REMOTE_PATH: "wp-content/themes/"
         SCRIPT: post-deploy.sh
         WPE_ENV: ${{ env.WPE_INSTALL_NAME }}
