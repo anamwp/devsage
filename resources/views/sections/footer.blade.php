@@ -1,4 +1,4 @@
-<footer class="content-info bg-black text-white py-20">
+<footer class="content-info bg-slate-700 text-white py-20">
 	{{-- No jpg image support in blade icon --}}
 	{{-- <x-icon-lorem /> --}}
 	<div class="container mx-auto">
