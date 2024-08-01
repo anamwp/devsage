@@ -1,6 +1,6 @@
 <article @php(post_class('h-entry w-3/5 mx-auto py-10'))>
   <header class="mb-5">
-    <h1 class="p-name text-2xl">
+    <h1 class="p-name text-2xl font-bold font-roboto">
       {!! $title !!}
     </h1>
 
